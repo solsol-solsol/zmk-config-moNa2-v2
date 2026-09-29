@@ -1,0 +1,7 @@
+config MONA2_LAYER_NOTIFIER
+    bool "Send the active layer state to the host over Raw HID"
+    depends on !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+    default y if RAW_HID
+    help
+      有効レイヤーが変わるたびに、その状態を Raw HID でホストへ送る (moNa2 Studio のレイヤーオーバーレイ用)。
+      分割キーボードではセントラル (右手) のみで有効。
