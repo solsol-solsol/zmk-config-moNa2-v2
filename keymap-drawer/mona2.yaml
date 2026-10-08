@@ -151,11 +151,11 @@ layers:
   - VOL UP
   - NEXT
   - PP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mona2_macro_1'
+  - '&mona2_macro_2'
+  - '&mona2_macro_3'
+  - '&mona2_macro_5'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -303,20 +303,7 @@ layers:
   - {t: ▽, type: trans}
 combos:
 - p: [17, 18]
-  k: ESC
+  k: '&mona2_macro_1'
 - p: [16, 17, 18]
-  k: SYM
-  l: [BASE, NUM]
-- p: [0, 1, 2, 3]
-  k: Gui+Z
-- p: [11, 12]
-  k: {t: TAB, h: LCTRL}
+  k: '&mona2_macro_2'
   l: [BASE]
-- p: [22, 23]
-  k: '&mmv MOVE_UP'
-- p: [28, 29]
-  k: OUT TOG
-- p: [5, 6]
-  k: {t: LSHIFT, h: sticky}
-- p: [26, 27]
-  k: '&caps_word'
