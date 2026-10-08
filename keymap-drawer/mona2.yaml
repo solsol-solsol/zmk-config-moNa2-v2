@@ -86,6 +86,49 @@ layers:
   - {t: ▽, type: trans}
   - DEL
   - {t: ▽, type: trans}
+  SLOW:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   SYM:
   - '!'
   - '@'
@@ -151,26 +194,26 @@ layers:
   - VOL UP
   - NEXT
   - PP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: toggle}
+  - {t: NUM, h: sticky}
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_DOWN'
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_RIGHT'
+  - {t: BT, h: '4'}
+  - {t: BT DISC, h: '0'}
+  - BT CLR ALL
+  - BT NXT
+  - BT PRV
+  - OUT TOG
+  - '&caps_word'
+  - {t: ESC, s: '`'}
+  - '&key_repeat'
+  - '&mona2_macro_1'
+  - '&mona2_macro_2'
+  - '&mona2_macro_3'
+  - SLOW
   - {t: ▽, type: trans}
   BLE:
   - {t: BT, h: '0'}
@@ -301,3 +344,11 @@ layers:
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [17, 18]
+  k: ESC
+- p: [16, 17, 18]
+  k: '&mona2_macro_2'
+  l: [BASE, NUM]
+- p: [0, 1, 2, 3]
+  k: OUT USB
