@@ -34,7 +34,7 @@ layers:
   - ','
   - .
   - /
-  - SCROLL
+  - {t: ▽, type: trans}
   - ESC
   - LALT
   - LGUI
@@ -249,7 +249,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
