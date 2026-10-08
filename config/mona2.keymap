@@ -24,16 +24,27 @@
     flavor = "balanced";
 };
 
-/* エンコーダー (moNa2 Studio の設定) */
-&inc_dec_kp {
-    tap-ms = <30>;
-};
-
-&sensors {
-    triggers-per-rotation = <24>;
-};
-
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_1 {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&mo 1>;
+        };
+        combo_2 {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&sl 2>;
+            layers = <1>;
+        };
+        combo_3 {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&kp B>;
+            layers = <1>;
+        };
+    };
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -56,7 +67,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <40>;
+            tap-ms = <20>;
         };
 
         scroll_right_left: mouse_wheel_right_left {
@@ -73,23 +84,23 @@
         layer_0 {
             display-name = "BASE";
             bindings = <
-                &kp Q             &kp W             &kp E             &kp R             &kp T             &kp Y             &kp U             &kp I             &kp O             &kp P
+                &mo 1             &to 4             &tog 2            &none             &lt 1 TAB         &kp Y             &kp U             &kp I             &kp O             &kp P
                 &kp A             &kp S             &kp D             &kp F             &kp G             &kp RBKT          &kp H             &kp J             &kp K             &kp L             &kp MINUS
                 &kp Z             &kp X             &kp C             &kp V             &kp B             &kp GRAVE         &kp SQT           &kp N             &kp M             &kp COMMA         &kp DOT           &kp FSLH
-                &trans            &kp ESC           &kp LALT          &kp LGUI          &lt 1 SPACE       &mt LSHIFT LANG2  &lt 2 ENTER       &kp BSPC          &mt RSHIFT LANG1
+                &trans            &kp ESC           &kp LALT          &kp LGUI          &kp SPACE         &mt LSHIFT LANG2  &lt 2 ENTER       &kp BSPC          &mt RSHIFT LANG1
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         layer_1 {
-            display-name = "NUM";
+            display-name = "FUN";
             bindings = <
-                &kp N1            &kp N2            &kp N3            &kp N4            &kp N5            &kp N6            &kp N7            &kp N8            &kp N9            &kp N0
-                &trans            &trans            &trans            &trans            &kp HOME          &trans            &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp END
+                &kp F1            &kp F2            &kp F3            &kp F4            &kp F5            &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
+                &kp F11           &kp F12           &trans            &trans            &trans            &trans            &kp C_PREV        &kp C_VOL_DN      &kp C_VOL_UP      &kp C_NEXT        &kp C_PP
                 &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &kp DEL           &trans
+                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
             >;
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         layer_2 {
@@ -104,23 +115,23 @@
         };
 
         layer_3 {
-            display-name = "FUN";
-            bindings = <
-                &kp F1            &kp F2            &kp F3            &kp F4            &kp F5            &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
-                &kp F11           &kp F12           &trans            &trans            &trans            &trans            &kp C_PREV        &kp C_VOL_DN      &kp C_VOL_UP      &kp C_NEXT        &kp C_PP
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN>;
-        };
-
-        layer_4 {
             display-name = "BLE";
             bindings = <
                 &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_CLR        &trans            &trans            &trans            &trans            &trans
                 &bootloader       &sys_reset        &studio_unlock    &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
                 &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
                 &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+            >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_4 {
+            display-name = "MOUSE";
+            bindings = <
+                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+                &trans            &trans            &trans            &trans            &trans            &trans            &mkp LCLK         &mkp RCLK         &mkp MCLK         &mkp MB4          &mkp MB5
+                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+                &trans            &trans            &trans            &trans            &trans            &trans            &mkp LCLK         &trans            &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
@@ -135,17 +146,6 @@
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
-        layer_6 {
-            display-name = "MOUSE";
-            bindings = <
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-                &trans            &trans            &trans            &trans            &trans            &trans            &mkp LCLK         &mkp RCLK         &mkp MCLK         &mkp MB4          &mkp MB5
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-                &trans            &trans            &trans            &trans            &trans            &trans            &mkp LCLK         &trans            &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
     };
 };
 
@@ -154,7 +154,7 @@
     input-processors =
         <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
         <&zip_xy_scaler 4 3>,
-        <&zip_temp_layer 6 700>;
+        <&zip_temp_layer 4 700>;
 
     scroller {
         layers = <5>;
@@ -163,5 +163,12 @@
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_scroll_scaler 1 5>;
+    };
+
+    mona2_speed_1 {
+        layers = <1 3>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 2 5>;
     };
 };
