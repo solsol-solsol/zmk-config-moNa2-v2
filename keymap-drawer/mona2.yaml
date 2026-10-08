@@ -34,7 +34,7 @@ layers:
   - ','
   - .
   - /
-  - {t: ▽, type: trans}
+  - SCROLL
   - ESC
   - LALT
   - LGUI
@@ -151,11 +151,11 @@ layers:
   - VOL UP
   - NEXT
   - PP
-  - '&mona2_macro_1'
-  - '&mona2_macro_2'
-  - '&mona2_macro_3'
-  - '&mona2_macro_5'
-  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -249,7 +249,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -301,9 +301,3 @@ layers:
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-combos:
-- p: [17, 18]
-  k: '&mona2_macro_1'
-- p: [16, 17, 18]
-  k: '&mona2_macro_2'
-  l: [BASE]
