@@ -142,7 +142,7 @@ layers:
   - F10
   - F11
   - F12
-  - {t: ▽, type: trans}
+  - '&key_repeat'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -151,27 +151,27 @@ layers:
   - VOL UP
   - NEXT
   - PP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: LSHIFT, h: sticky}
+  - {t: LCTRL, h: toggle}
+  - {t: NUM, h: sticky}
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_RIGHT'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_RIGHT'
+  - {t: BT, h: '4'}
+  - {t: BT DISC, h: '0'}
+  - BT CLR ALL
+  - BT NXT
+  - BT PRV
+  - OUT USB
+  - OUT BLE
+  - OUT TOG
+  - '&caps_word'
+  - {t: ESC, s: '`'}
   BLE:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -234,7 +234,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - A
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
