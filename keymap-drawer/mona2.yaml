@@ -142,7 +142,7 @@ layers:
   - F10
   - F11
   - F12
-  - '&key_repeat'
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -151,27 +151,27 @@ layers:
   - VOL UP
   - NEXT
   - PP
-  - {t: LSHIFT, h: sticky}
-  - {t: LCTRL, h: toggle}
-  - {t: NUM, h: sticky}
-  - '&mmv MOVE_UP'
-  - '&mmv MOVE_DOWN'
-  - '&mmv MOVE_LEFT'
-  - '&mmv MOVE_RIGHT'
-  - '&msc SCRL_UP'
-  - '&msc SCRL_DOWN'
-  - '&msc SCRL_LEFT'
-  - '&msc SCRL_RIGHT'
-  - {t: BT, h: '4'}
-  - {t: BT DISC, h: '0'}
-  - BT CLR ALL
-  - BT NXT
-  - BT PRV
-  - OUT USB
-  - OUT BLE
-  - OUT TOG
-  - '&caps_word'
-  - {t: ESC, s: '`'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   BLE:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -301,3 +301,22 @@ layers:
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+combos:
+- p: [17, 18]
+  k: ESC
+- p: [16, 17, 18]
+  k: SYM
+  l: [BASE, NUM]
+- p: [0, 1, 2, 3]
+  k: Gui+Z
+- p: [11, 12]
+  k: {t: TAB, h: LCTRL}
+  l: [BASE]
+- p: [22, 23]
+  k: '&mmv MOVE_UP'
+- p: [28, 29]
+  k: OUT TOG
+- p: [5, 6]
+  k: {t: LSHIFT, h: sticky}
+- p: [26, 27]
+  k: '&caps_word'
