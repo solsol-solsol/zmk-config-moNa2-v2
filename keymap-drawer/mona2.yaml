@@ -335,7 +335,7 @@ layers:
   - '&msc SCRL_UP'
   - '&msc SCRL_RIGHT'
   - SCROLL
-  - {t: ▽, type: trans}
+  - '&studio_unlock'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
