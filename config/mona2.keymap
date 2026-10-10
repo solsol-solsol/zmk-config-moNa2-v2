@@ -293,3 +293,8 @@
             <&zip_xy_scaler 1 8>;
     };
 };
+
+/* スリープから、キーを押して起きられるようにする (moNa2 Studio の設定) */
+&kscan0 {
+    wakeup-source;
+};
