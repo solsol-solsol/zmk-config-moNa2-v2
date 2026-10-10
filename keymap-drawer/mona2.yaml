@@ -301,3 +301,58 @@ layers:
   - '&mkp LCLK'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  TEST:
+  - {t: LSHIFT, h: sticky}
+  - {t: LSHIFT, h: toggle}
+  - {t: NUM, h: sticky}
+  - '&caps_word'
+  - {t: ESC, s: '`'}
+  - '&key_repeat'
+  - '&mona2_macro_1'
+  - '&mona2_macro_2'
+  - '&mona2_macro_3'
+  - {t: BASE, h: toggle}
+  - OUT USB
+  - OUT BLE
+  - OUT TOG
+  - BT PRV
+  - BT NXT
+  - {t: BT, h: '0'}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: BT DISC, h: '0'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '['
+  - \
+  - '='
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - SCROLL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+combos:
+- p: [0, 9]
+  k: {t: TEST, h: toggle}
+- p: [1, 2, 3]
+  k: '&mona2_macro_1'
+  l: [TEST]
+- p: [21, 22, 23, 24]
+  k: '&mona2_macro_4'
+  l: [TEST]
+- p: [17, 18]
+  k: '0'
+  l: [TEST]
