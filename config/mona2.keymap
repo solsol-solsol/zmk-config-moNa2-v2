@@ -25,6 +25,11 @@
     flavor = "balanced";
 };
 
+/* エンコーダー (moNa2 Studio の設定) */
+&sensors {
+    triggers-per-rotation = <20>;
+};
+
 / {
     mona2_macros {
         mona2_macro_1: mona2_macro_1 {
@@ -155,7 +160,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            tap-ms = <20>;
+            tap-ms = <40>;
         };
 
         scroll_right_left: mouse_wheel_right_left {
@@ -252,7 +257,7 @@
                 &sk LSHIFT        &kt LSHIFT        &sl 1             &caps_word        &gresc            &key_repeat       &mona2_macro_1    &mona2_macro_2    &mona2_macro_3    &to 0
                 &out OUT_USB      &out OUT_BLE      &out OUT_TOG      &bt BT_PRV        &bt BT_NXT        &bt BT_SEL 0      &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP      &mmv MOVE_RIGHT   &bt BT_DISC 0
                 &trans            &trans            &trans            &trans            &kp LBKT          &kp BSLH          &kp EQUAL         &msc SCRL_LEFT    &msc SCRL_DOWN    &msc SCRL_UP      &msc SCRL_RIGHT   &mo 5
-                &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+                &studio_unlock    &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
             >;
             sensor-bindings = <&scroll_up_down>;
         };
@@ -263,7 +268,8 @@
 &trackball_central_listener {
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
+        <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
         <&zip_xy_scaler 1 2>,
         <&zip_temp_layer 6 700>;
 
@@ -271,6 +277,7 @@
         layers = <5>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
@@ -281,7 +288,8 @@
         layers = <7>;
         input-processors =
             <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_scaler 1 8>;
     };
 };
