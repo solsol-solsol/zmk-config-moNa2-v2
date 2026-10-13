@@ -39,7 +39,7 @@ layers:
   - SCROLL
   - LCTRL
   - LSHIFT
-  - {t: LANG2, h: SCROLL}
+  - {t: Ctl+SPACE, h: SCROLL}
   - {t: SPACE, h: SYM}
   - {t: BSPC, h: NUM}
   - {t: ENTER, h: RSHIFT}
