@@ -12,6 +12,8 @@ manifest:
       url-base: https://github.com/caksoylar
     - name: zettaface  # <-- Input Processor Keybind
       url-base: https://github.com/zettaface
+    - name: zzeneg     # <-- Raw HID (レイヤーオーバーレイ用)
+      url-base: https://github.com/zzeneg
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -29,5 +31,8 @@ manifest:
     - name: zmk-input-processor-keybind
       remote: zettaface
       revision: main
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: 6a37765dfab6197292e7a9f47305dcf87386d56a  # 2026-08-24 main
   self:
     path: config
