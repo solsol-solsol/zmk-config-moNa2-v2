@@ -39,10 +39,10 @@ layers:
   - LALT
   - LGUI
   - {t: SPACE, h: NUM}
-  - {t: LANG2, h: LSHIFT}
+  - {t: Ctl+SPACE, h: FUN}
   - {t: ENTER, h: SYM}
   - BSPC
-  - {t: LANG1, h: RSHIFT}
+  - {t: Ctl+Sft+SPACE, h: RSHIFT}
   NUM:
   - '1'
   - '2'
@@ -167,9 +167,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   BLE:
