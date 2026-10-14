@@ -16,7 +16,7 @@ layers:
   - D
   - F
   - G
-  - FUNC
+  - FUN
   - H
   - J
   - K
@@ -27,8 +27,8 @@ layers:
   - C
   - V
   - B
-  - Ctl+AC COPY
-  - Ctl+AC PASTE
+  - '`'
+  - AC PASTE
   - N
   - M
   - ','
@@ -36,10 +36,10 @@ layers:
   - /
   - ESC
   - LGUI
-  - SCROLL
+  - LALT
   - LCTRL
   - LSHIFT
-  - {t: Ctl+SPACE, h: SCROLL}
+  - {t: Alt+`, h: SCROLL}
   - {t: SPACE, h: SYM}
   - {t: BSPC, h: NUM}
   - {t: ENTER, h: RSHIFT}
@@ -88,38 +88,38 @@ layers:
   - ''
   SYM:
   - '!'
-  - '['
+  - '@'
   - '#'
   - $
   - '%'
-  - '='
   - ^
-  - '"'
+  - '&'
   - '*'
   - (
+  - )
   - '?'
   - '-'
-  - ':'
-  - _
+  - +
+  - '='
   - /
-  - NUBS
+  - \
   - '|'
   - ','
   - .
+  - '['
   - ']'
-  - \
   - ''
-  - +
-  - ''
+  - '~'
+  - _
   - ''
   - INT3
-  - '{'
+  - '`'
   - <
   - '>'
   - ;
-  - ''''
+  - ':'
+  - '{'
   - '}'
-  - '|'
   - ''
   - ''
   - ''
@@ -129,7 +129,7 @@ layers:
   - {type: held}
   - ''
   - ''
-  FUNC:
+  FUN:
   - F1
   - F2
   - F3
@@ -146,7 +146,7 @@ layers:
   - ''
   - ''
   - {type: held}
-  - ''
+  - Sft+F6
   - ''
   - ''
   - ''
@@ -251,14 +251,14 @@ layers:
   - ''
   - ''
   - ''
+  - ''
+  - ''
+  - ''
   - {type: held}
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  MOUSE: ['', '', '', '', '', Gui+X, '&mkp MCLK', '', '', '', '', '', '', '', '', '', Gui+C, '&mkp LCLK', '&mkp RCLK', '', '', '', '', '', '', '', '', '', Gui+V,
+  MOUSE: ['', '', '', '', '', AC CUT, '&mkp MCLK', '', '', '', '', '', '', '', '', '', AC COPY, '&mkp LCLK', '&mkp RCLK', '', '', '', '', '', '', '', '', '', AC PASTE,
     '&mkp MB4', '&mkp MB5', '', '', '', '', '', '', '', '', '', '', '']
 combos:
 - p: [38, 39]
